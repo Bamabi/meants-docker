@@ -6,7 +6,7 @@ import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
 
 import { LanguagesService } from './languages.service';
-import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../testing-providers';
+import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../../testing-providers';
 import { environment } from '../../../environments/environment';
 import { LanguagesModel } from '../../stubs/stub-languages.service';
 

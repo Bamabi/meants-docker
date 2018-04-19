@@ -6,7 +6,7 @@ import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
 
 import { UserResolverService } from './user-resolver.service';
-import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../testing-providers';
+import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../../testing-providers';
 import { environment } from '../../../environments/environment';
 import { UsersModel } from '../../stubs/stub-users.service';
 

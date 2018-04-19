@@ -9,7 +9,7 @@ import { CreateComponent } from './create.component';
 import { CreateOrUpdateComponent } from '../create-or-update/create-or-update.component';
 import { UsersService } from '../users.service';
 import { StubUsersService, UsersModel } from '../../../stubs/stub-users.service';
-import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../testing-providers';
+import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../../testing-providers';
 
 
 const defaultUser = {

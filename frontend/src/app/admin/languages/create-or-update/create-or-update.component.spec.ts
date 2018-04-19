@@ -6,7 +6,7 @@ import { DebugElement } from '@angular/core';
 import { CreateOrUpdateComponent } from './create-or-update.component';
 import { LanguagesService } from '../languages.service';
 import { StubLanguagesService } from '../../../stubs/stub-languages.service';
-import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../testing-providers';
+import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../../testing-providers';
 
 describe('CreateOrUpdateComponent', () => {
   let component: CreateOrUpdateComponent;

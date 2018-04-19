@@ -8,9 +8,9 @@ import { Observable } from 'rxjs/Observable';
 
 import { CreateOrUpdateComponent } from '../create-or-update/create-or-update.component';
 import { EditComponent } from './edit.component';
-import { UsersService } from '../users.service';
+import { LanguagesService } from '../languages.service';
 import { StubUsersService, UsersModel } from '../../../stubs/stub-users.service';
-import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../testing-providers';
+import { TESTING_IMPORTS, TESTING_PROVIDERS } from '../../../../../testing-providers';
 
 const defaultUser = {
   id: 0,
@@ -34,7 +34,7 @@ describe('EditComponent', () => {
       declarations: [EditComponent, CreateOrUpdateComponent],
       providers: [
         TESTING_PROVIDERS,
-        { provide: UsersService, useClass: StubUsersService },
+        { provide: LanguagesService, useClass: StubUsersService },
         { provide: ActivatedRoute, useValue: { params: params } }
       ]
     })
@@ -54,7 +54,7 @@ describe('EditComponent', () => {
   });
 
   it('should not get the user by its identifier', fakeAsync(() => {
-    const service = TestBed.get(UsersService) as UsersService;
+    const service = TestBed.get(LanguagesService) as LanguagesService;
     const userId = 5;
     service.getById = jasmine.createSpy('getById').and.returnValue(Observable.of(UsersModel.find(item => item.id === userId)));
 
@@ -68,7 +68,7 @@ describe('EditComponent', () => {
   }));
 
   it('should get the user by its identifier', fakeAsync(() => {
-    const service = TestBed.get(UsersService) as UsersService;
+    const service = TestBed.get(LanguagesService) as LanguagesService;
     const userId = 5;
     service.getById = jasmine.createSpy('getById').and.returnValue(Observable.of(UsersModel.find(item => item.id === userId)));
 
@@ -82,18 +82,18 @@ describe('EditComponent', () => {
   }));
 
   it('should not save the child component', () => {
-    component.onUserSubmitted = jasmine.createSpy('onUserSubmitted');
+    component.onLanguageSubmitted = jasmine.createSpy('onLanguageSubmitted');
     childComponent.form.patchValue({ email: '' });
     childComponent.save(new Event('click'));
-    expect(component.onUserSubmitted).not.toHaveBeenCalled();
+    expect(component.onLanguageSubmitted).not.toHaveBeenCalled();
   });
 
   it('should save the child component', fakeAsync(() => {
-    component.onUserSubmitted = jasmine.createSpy('onUserSubmitted').and.callThrough();
+    component.onLanguageSubmitted = jasmine.createSpy('onLanguageSubmitted').and.callThrough();
     childComponent.form.patchValue(defaultUser);
     childComponent.save(new Event('click'));
     fixture.detectChanges();
-    expect(component.onUserSubmitted).toHaveBeenCalledWith(defaultUser);
+    expect(component.onLanguageSubmitted).toHaveBeenCalledWith(defaultUser);
   }));
 
   it('should save the child component and return to list', fakeAsync(() => {

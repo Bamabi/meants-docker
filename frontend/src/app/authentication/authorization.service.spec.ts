@@ -3,7 +3,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 
 import { AuthorizationService } from './authorization.service';
-import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../testing-providers';
+import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../testing-providers';
 import { StubTokenHelper } from '../stubs/stub-token-helper';
 
 

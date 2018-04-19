@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 
 import { AuthorizationService } from '../authentication/authorization.service';
 import { HasRightDirective } from './has-right.directive';
-import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../testing-providers';
+import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../testing-providers';
 
 @Component({
   template: `<span *appHasRight="'R_API_TEST_R'"></span>`

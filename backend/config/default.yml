@@ -6,7 +6,7 @@ auth:
     jwt_secret: 'supersecret'
 
 mongo:
-    url: 'mongodb://localhost:27017/testDB'
+    url: 'mongodb://localhost:27017/wallstit'
     #url: 'mongodb://localhost:27018/testDB'
 
 facebook:

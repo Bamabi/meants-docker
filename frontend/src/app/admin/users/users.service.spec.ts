@@ -6,7 +6,7 @@ import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
 
 import { UsersService } from './users.service';
-import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../testing-providers';
+import { TESTING_PROVIDERS, TESTING_IMPORTS } from '../../../../testing-providers';
 import { environment } from '../../../environments/environment';
 import { UsersModel } from '../../stubs/stub-users.service';
 
@@ -58,7 +58,7 @@ describe('UsersService', () => {
     urlParams.set('search', params.search);
     urlParams.set('page', params.page.toString());
     urlParams.set('limit', params.limit.toString());
-    service.allCount(params).subscribe(res => {
+    service.allCount(params.search).subscribe(res => {
       expect(mockHttp.get).toHaveBeenCalledWith(
         environment.apiUrlBase + 'users/count', { search: urlParams });
       expect(res).toEqual(UsersModel);

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { CoreModule } from '../../core/core.module';
 import { ForgotPasswordComponent } from './forgot-password.component';
-import { TESTING_PROVIDERS } from '../../../testing-providers';
+import { TESTING_PROVIDERS } from '../../../../testing-providers';
 import { AuthorizationService } from '../authorization.service';
 
 describe('ForgotPasswordComponent', () => {

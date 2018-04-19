@@ -16,7 +16,6 @@ const routes: Routes = [
     },
     children: [
       { path: '', component: AdminComponent },
-      // { path: 'gmaps', component: GmapsComponent },
       { path: 'users', loadChildren: './users/users.module#UsersModule' },
       { path: 'languages', loadChildren: './languages/languages.module#LanguagesModule' },
       { path: '**', redirectTo: '', pathMatch: 'full' }

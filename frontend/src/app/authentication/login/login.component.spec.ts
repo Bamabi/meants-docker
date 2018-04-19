@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { CoreModule } from '../../core/core.module';
 import { LoginComponent } from './login.component';
-import { TESTING_PROVIDERS } from '../../../testing-providers';
+import { TESTING_PROVIDERS } from '../../../../testing-providers';
 import { StubTokenHelper } from '../../stubs/stub-token-helper';
 import { AuthorizationService } from '../authorization.service';
 import { AppErrorHandler } from './../../core/app-error-handler';
